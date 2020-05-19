@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+## XmppStone
 
-You can use the [editor on GitHub](https://github.com/vukoye/vukoye.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Lightweight XMPP client library written completely in Dart.
+My intention is to write simple to use library for future XMPP client based on Flutter.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is actively developing library.
+Currently supported:
+ - RFC6120 - Extensible Messaging and Presence Protocol (XMPP): Core 
+ - RFC6121 - Extensible Messaging and Presence Protocol (XMPP): Instant Messaging and Presence
+ - XEP-0198 : Stream Management
+ - XEP-0085: Chat State Notifications
+Partly supported:
+ - XEP-0030: Service Discovery
 
-### Markdown
+Actively working on: 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Latest news
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+- 2020-05-02: Added Initial Support for XEP-0198 : Stream Management
 
-1. Numbered
-2. List
+- 2020-05-02: Added Initial Support for XEP-0085 : Chat State Notifications
 
-**Bold** and _Italic_ and `Code` text
+- 2019-04-02: added support for: XEP-0054: vcard-temp
 
-[Link](url) and ![Image](src)
+- 2019-04-01: added support for SHA-1 and SHA-256 authentication algorithm
+
+## Usage
+
+```dart
+import 'package:xmpp_stone/xmpp_stone.dart' as xmpp;
+
+main() {
+  xmpp.Connection connection = new xmpp.Connection("user@domain", "password", 5222);
+  connection.open();
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Features and bugs
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vukoye/vukoye.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Work in progress
